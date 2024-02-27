@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  /* background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.select-input {
+  @apply bg-white;
+  @apply border;
+  @apply border-gray-300;
+  @apply rounded-md;
+  @apply shadow-sm;
+  @apply focus:outline-none;
+  @apply focus:ring-1;
+  @apply focus:ring-indigo-500;
+  @apply focus:border-indigo-500;
+  @apply sm:text-sm;
+  @apply w-full;
+  @apply py-2;
+  @apply pl-3;
+  @apply pr-10;
+  @apply text-gray-900;
+  @apply cursor-pointer;
+  background: "url('/select-arrow-down.svg') white   no-repeat right 0.75rem center/50px 50px",
+}
